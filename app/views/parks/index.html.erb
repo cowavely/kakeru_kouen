@@ -18,6 +18,13 @@
         <td><%= park.name %></td>
         <td><%= park.address %></td>
         <td><%= park.description %></td>
+        <td><%= image_tag park.image, size: "60" %></td>
+        <td>
+          <% park.tags.any? %>
+          <% park.tags.each do |tag| %>
+            <%= tag.name %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', park %></td>
         <td><%= link_to 'Edit', edit_park_path(park) %></td>
         <td><%= link_to 'Destroy', park, method: :delete, data: { confirm: 'Are you sure?' } %></td>
