@@ -18,7 +18,7 @@
         </div>
 				<%= submit_tag '見る', id:"look" %>
          <div id="buttons">
-				<% ActsAsTaggableOn::Tag.all.pluck(:name).sample(10).each do |tag| %>
+				<% ActsAsTaggableOn::Tag.all.pluck(:name).sample(15).each do |tag| %>
 					<button class="tag">
 						<%= tag %>
 					</button>

@@ -78,7 +78,11 @@ body, html {
    padding: 0 15px 5px 15px;
    border-color: #666666;
  }
- 
+}
+
+#search-page input[type=checkbox] + label, #search-page input[type=checkbox]:checked + label {
+  padding: 0 5px 5px 5px;
+
 }
 
 .parkGrid {
@@ -290,11 +294,13 @@ body, html {
       position: relative;
       z-index: 9;
       border-bottom: 3px solid #fff;
+      font-size:30px;
     }
 
     #buttons{
       margin: 40px;
       position: center;
+      text-align:center;
     }
 
     button {
@@ -314,17 +320,17 @@ body, html {
     // }
 
     #look{
-      padding-right: 10px;
-      size: 27px;
+      font-size: 20px;
       color: #fff;
       float:right;
       margin-right:50px;
-      border: solid 2px #fff;
+      border: solid 1px #fff;
       // background-image: image-url("icon.png");
       background-size: 69px 60px;
       background-position: 1px -8px;
       background-repeat: no-repeat;
       background-color: transparent;
+      margin-top: -50px;
     }
 
     #look:hover{
