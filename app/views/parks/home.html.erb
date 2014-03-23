@@ -1,6 +1,6 @@
 
-<div id="header">
-	
+<!-- <div id="header">
+
 </div>
 
 <div class="search_form">
@@ -35,5 +35,108 @@
 		</div>
 
 	<% end %>
+
+</div>
+ -->
+
+	<div id="demo-wrapper">
+
+         <div id="demo">
+
+      <figure>
+
+            <div id="flowerbox">
+               <div id="target" onMouseover="openPopUp()" onMouseout="closePopUp()">
+               <%= image_tag "flower-icon-white.png", name:"icon1", onmouseover: "brown1()", onmouseout: "white1()", alt: "flower" %>
+               </div>
+　　　　          <div id="fukidashi" onMouseover="openPopUp()" onMouseout="closePopUp()">
+                  綺麗な植物
+　　　　          </div>
+            </div>
+
+            <div id="toiletbox">
+               <div id="target2" onMouseover="openPopUp2()" onMouseout="closePopUp2()">
+               <%= image_tag "toilet-icon-white.png", name:"icon2", onmouseover: "brown2()", onmouseout: "white2()", alt: "toilet" %>
+               </div>
+　　　　          <div id="fukidashi2" onMouseover="openPopUp2()" onMouseout="closePopUp2()">
+                  トイレ
+　　　　          </div>
+            </div>
+
+
+            <div id="waterbox">
+               <div id="target3" onMouseover="openPopUp3()" onMouseout="closePopUp3()">
+               <%= image_tag "water-icon-white.png", name:"icon3", onmouseover: "brown3()", onmouseout: "white3()", alt: "water" %>
+              </div>
+　　　　          <div id="fukidashi3" onMouseover="openPopUp3()" onMouseout="closePopUp3()">
+                  水道
+　　　　          </div>
+            </div>
+
+            <div id="benchbox">
+               <div id="target4" onMouseover="openPopUp4()" onMouseout="closePopUp4()">
+               <%= image_tag "bench-icon-white.png", name:"icon4", onmouseover: "brown4()", onmouseout: "white4()", alt: "bench" %>
+              </div>
+　　　　          <div id="fukidashi4" onMouseover="openPopUp4()" onMouseout="closePopUp4()">
+                  ベンチ
+　　　　          </div>
+            </div>
+
+            <div id="parkingbox">
+               <div id="target5" onMouseover="openPopUp5()" onMouseout="closePopUp5()">
+               <%= image_tag "parking-icon-white.png", name:"icon5", onmouseover: "brown5()", onmouseout: "white5()", alt: "parking" %>
+            </div>
+　　　　          <div id="fukidashi5" onMouseover="openPopUp5()" onMouseout="closePopUp5()">
+                  駐車場
+　　　　          </div>
+            </div>
+
+            <div id="sportsbox">
+               <div id="target6" onMouseover="openPopUp6()" onMouseout="closePopUp6()">
+               <%= image_tag "sports-icon-white.png", name:"icon6", onmouseover: "brown6()", onmouseout: "white6()", alt: "sports" %>
+              </div>
+　　　　          <div id="fukidashi6" onMouseover="openPopUp6()" onMouseout="closePopUp()">
+                  運動場
+　　　　          </div>
+            </div>
+
+            <div id="playgroundbox">
+               <div id="target7" onMouseover="openPopUp7()" onMouseout="closePopUp7()">
+               <%= image_tag "playground-icon-white.png", name:"icon7", onmouseover: "brown7()", onmouseout: "white7()", alt: "playground" %>
+              </div>
+　　　　          <div id="fukidashi7" onMouseover="openPopUp7()" onMouseout="closePopUp()">
+                  遊具
+　　　　          </div>
+            </div>
+
+      </figure>
+
+       <form name="searchform" id="searchform" method="get" action="#">
+         <input name="keywords" id="keywords" value="" type="text" />
+         ×公園=</form>
+
+         <button id="look">見る</button>
+
+      <div id="buttons">
+         <button id="1">リフレッシュ</button>
+         <button id="2">リラックス</button>
+         <button id="3">一人で泣きたい</button>
+         <button id="4">おしゃべりする</button>
+         <button id="5">楽しい</button>
+         <button id="6">悲しい</button>
+         <button id="7">苦しい</button>
+         <button id="8">嬉しい</button>
+         <button id="9">9</button>
+         <button id="10">10</button>
+         <button id="11">11</button>
+         <button id="12">12</button>
+         <button id="13">13</button>
+         <button id="14">14</button>
+      </div>
+
+     <div id="caption">
+
+      </div>
+</div>
 
 </div>
