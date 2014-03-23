@@ -39,10 +39,10 @@
 </div>
  -->
 
-	<div id="demo-wrapper">
+	<div id="demo-wrapper" class="nature-background">
 
 
-         <div id="demo"  class="search_form">
+		<div id="demo"  class="search_form">
 
 
       <%= form_tag("/search", method: "get") do %>
@@ -58,9 +58,11 @@
 					</div>
       </figure>
 
+      <br class="clear">
+
        <div id="searchform">
        	<%= text_field_tag(:tags, "", placeholder: "", id: "keywords") %>
-         ×公園=
+         ×公園= <div id="resultNum"><%= Park.count %></div>
         </div>
 
 				<%= submit_tag '見る', id:"look" %>
@@ -93,9 +95,7 @@
  -->
       <% end %>
 
-     <div id="caption">
 
-      </div>
 </div>
 
 </div>

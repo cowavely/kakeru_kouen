@@ -4,7 +4,23 @@ body,h1,h2,h3,h4,h5,h6 {
 	font-family:'Droid Sans',"游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
 }
 
-#demo-wrapper {
+body, html {
+  height: 100%;
+}
+
+.nature-background {
+   width:100%;
+   height: 100%;
+   margin:0px;
+   bottom: 0;
+   background: image-url("midori.JPG");
+   background-size: cover;
+   background-repeat: no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   font-family: "自由の翼フォント", "游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+ }
+
 
 
 #searchQuery {
@@ -136,17 +152,6 @@ body,h1,h2,h3,h4,h5,h6 {
    letter-spacing:normal;
  }
 
- body{
-   width:100%;
-   height: auto;
-   margin:0px;
-   background: image-url("midori.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   font-family: "自由の翼フォント", "游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
- }
 
  img.bg{
   min-height: 100%;
@@ -368,4 +373,6 @@ body,h1,h2,h3,h4,h5,h6 {
  }
 
 
+.clear {
+  clear: both;
 }
