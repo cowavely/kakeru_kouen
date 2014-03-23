@@ -41,8 +41,11 @@
 
 	<div id="demo-wrapper">
 
+
          <div id="demo"  class="search_form">
 
+
+      <%= form_tag("/search", method: "get") do %>
       <figure>
 					<div class="icon_checkbox box">
 						<% Park::FLAGS.each_key do |key| %>
@@ -55,9 +58,10 @@
 					</div>
       </figure>
 
-       <form name="searchform" id="searchform" method="get" action="#">
-         <input name="keywords" id="keywords" value="" type="text" />
-         ×公園=</form>
+       <div id="searchform">
+       	<%= text_field_tag(:tags, "", placeholder: "", id: "keywords") %>
+         ×公園=
+        </div>
 
          <button id="look">見る</button>
 
@@ -77,6 +81,8 @@
          <button id="13">13</button>
          <button id="14">14</button>
       </div>
+
+      <% end %>
 
      <div id="caption">
 
