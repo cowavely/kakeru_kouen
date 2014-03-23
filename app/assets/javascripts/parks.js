@@ -11,7 +11,7 @@ function updateResults () {
 		var params = {
 			region: region.val(),
 			flags: flags,
-			tags: tags.val()
+			tags: tags.val().trim()
 		};
 		console.log(params);
 

@@ -9,6 +9,7 @@ class ParksController < ApplicationController
   end
 
   def search
+    binding.pry
     @parks = Park.all
     @flags = params[:flags]
     @query_flags = 0
@@ -62,7 +63,8 @@ class ParksController < ApplicationController
           hasParking: row[8],
           hasSports: row[9],
           hasPlayground: row[10],
-          img_url: row[1]
+          img_url: row[1],
+          tag_list: row[11]
         )
         logger.info(park_flags)
         park.set_flags(park_flags)
