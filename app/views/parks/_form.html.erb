@@ -27,34 +27,13 @@
     <%= f.label :image %><br>
     <%= f.file_field :image %>
   </div>
-  <div class="field">
-    <%= f.label :hasToilet %><br>
-    <%= f.check_box :hasToilet %>
-  </div>
-  <div class="field">
-    <%= f.label :hasWater %><br>
-    <%= f.check_box :hasWater %>
-  </div>
-  <div class="field">
-    <%= f.label :hasNature %><br>
-    <%= f.check_box :hasNature %>
-  </div>
-  <div class="field">
-    <%= f.label :hasBench %><br>
-    <%= f.check_box :hasBench %>
-  </div>
-  <div class="field">
-    <%= f.label :hasParking %><br>
-    <%= f.check_box :hasParking %>
-  </div>
-  <div class="field">
-    <%= f.label :hasSports %><br>
-    <%= f.check_box :hasSports %>
-  </div>
-  <div class="field">
-    <%= f.label :hasPlayground %><br>
-    <%= f.check_box :hasPlayground %>
-  </div>
+  
+  <% Park::FLAGS.each_key do |key| %>
+    <div class="field">
+      <%= f.label key.to_sym %>
+      <%= check_box_tag "park[flags][#{key}]" %>
+    </div>
+  <% end %>
 
   <div class="field">
   <%= f.label :tags %>

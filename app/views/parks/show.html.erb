@@ -15,5 +15,15 @@
   <%= @park.description %>
 </p>
 
+<p>
+  <strong>Flags:</strong>
+  <div class="icon_guide">
+  	<% Park::FLAGS.each_key do |flag| %>
+  		<%= image_tag icon_name(flag, "brown"), size: "25", class: "#{'off' unless @park.has_flag?(flag)}" %>
+  	<% end %>
+  </div>
+</p>
+
+
 <%= link_to 'Edit', edit_park_path(@park) %> |
 <%= link_to 'Back', parks_path %>

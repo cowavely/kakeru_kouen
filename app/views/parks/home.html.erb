@@ -1,0 +1,39 @@
+
+<div id="header">
+	
+</div>
+
+<div class="search_form">
+
+	<%= form_tag("/search", method: "get") do %>
+
+		<div class="region">
+			<%= select_tag "region", "<option>流山市</option><option>北部</option><option>南部</option><option>中部</option><option>東部</option>".html_safe %>
+		</div>
+
+		<div class="icon_checkbox">
+			<% Park::FLAGS.each_key do |key| %>
+				<%= check_box_tag "[flags][#{key}]", '1', false, class: 'checkbox' %>
+				<%= label_tag "[flags][#{key}]", (image_tag icon_name(key, "gray"), size: '35') %>
+			<% end %>
+		</div>
+
+		<div class="equation">
+		<button id="clear-button">Clear</button>
+		<%= text_field_tag(:tags, "", placeholder: "") %>
+		<h1> x = <div id="resultNum"><%= Park.count %></div></h1>
+		</div>
+
+		<%= submit_tag "見る" %>
+
+		<div class="tag_cloud">
+		<% ActsAsTaggableOn::Tag.all.pluck(:name).sample(10).each do |tag| %>
+			<div class="tag" onclick="document.getElementById('tags').value+=' <%= tag %> ';">
+				<%= tag %>
+			</div>
+		<% end %>
+		</div>
+
+	<% end %>
+
+</div>

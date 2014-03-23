@@ -1,0 +1,111 @@
+// body {background-color:#000;}
+
+body,h1,h2,h3,h4,h5,h6 {
+	font-family:'Droid Sans',"游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+}
+
+.search_form {
+	input[type=checkbox] {
+	display:none;
+	}
+	 
+	input[type=checkbox] + label
+	{
+	height: 35px;
+	width: 35px;
+	display:inline-block;
+	padding: 0 15px 5px 15px;
+	border-bottom-style: solid;
+	border-bottom-width: 4px;
+	border-color: transparent;
+
+	opacity: 0.3;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+	}
+
+	label:hover, label:active, input[type=checkbox]:hover+label, input[type=checkbox]:active+label {
+	    cursor: pointer;
+	    opacity: 0.8;
+	}
+
+	input[type=checkbox]:checked + label
+	{
+	height: 35px;
+	width: 35px;
+	opacity: 1.0;
+	display:inline-block;
+	padding: 0 15px 5px 15px;
+
+	border-color: #666666;
+	}
+
+	.icon_checkbox {
+		   position: fixed;
+    	top: 1em;
+    	right: 1em;
+	}
+}
+
+.tag {
+	// color:#FFF;
+	display:inline-block;
+	padding: 5px 15px;
+	border: 1px solid rgba(0, 0, 0, .8);
+	margin: 2px;
+	font-size:13px;
+}
+
+
+.parkGrid {
+	width: 900px;
+	margin:auto;
+	min-height: 400px;
+	max-height: 3000px;
+
+	.parkItem {
+		width:268px;
+		height: 500px;
+		margin: 0 30px 30px 0;
+		display: block;
+		position: relative;
+		float:left;
+		text-align:center;
+		.parkImage {
+			width:268px;
+			height:268px;
+		}
+		h2 {
+			font-size:14px;
+			margin: 11px 0px 2px 0px;
+		}
+		p {
+			font-size:11px;
+			margin: 0 0 3px 0;
+			color: #999999;
+			font-weight:normal;
+		}
+		.icon_guide {
+
+		}
+		.parkDescription {
+			border-top: 1px solid black;
+			border-color: #CCCCCC;
+			padding-top: 11px;
+			line-height:110%;
+		}
+	}
+}
+
+
+h1, #resultNum {
+	display: inline;
+}
+.icon_guide {
+	opacity:1.0;
+	.off {
+		opacity:0.3 !important;
+		margin:0;
+	}
+}
