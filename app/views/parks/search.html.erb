@@ -1,8 +1,10 @@
 <div id="searchResults">
   <h1>
     <%= @tags %>
+    <% unless @flags.nil? %>
     <% @flags.each_key do |flag| %>
       <%= image_tag icon_name(flag, "gray"), size:"25" %>
+    <% end %>
     <% end %>
   </h1>
 
