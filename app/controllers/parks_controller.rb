@@ -39,37 +39,37 @@ class ParksController < ApplicationController
     i=0
     sheet1.each do |row|
       # do something interesting with a row
-      # if i>0
-        if i > 0
-          park_flags = {
-              has_toilet: row[5],
-              has_water: row[6],
-              has_nature: row[4],
-              has_bench: row[7],
-              has_parking: row[8],
-              has_sports: row[9],
-              has_playground: row[10]
-          }
-          park = Park.new(
-            name: row[0],
-            address: row[3],
-            description: row[2],
-            hasToilet: row[5],
-            hasWater: row[6],
-            hasNature: row[4],
-            hasBench: row[7],
-            hasParking: row[8],
-            hasSports: row[9],
-            hasPlayground: row[10],
-            img_url: row[1]
-          )
-          park.set_flags(park_flags)
-          park.save
-        end
-        logger.info(row)
-      # end
+      if i > 0
+        park_flags = {
+            has_toilet: row[5].to_i.to_s,
+            has_water: row[6].to_i.to_s,
+            has_nature: row[4].to_i.to_s,
+            has_bench: row[7].to_i.to_s,
+            has_parking: row[8].to_i.to_s,
+            has_sports: row[9].to_i.to_s,
+            has_playground: row[10].to_i.to_s
+        }
+        park = Park.new(
+          name: row[0],
+          address: row[3],
+          description: row[2],
+          hasToilet: row[5],
+          hasWater: row[6],
+          hasNature: row[4],
+          hasBench: row[7],
+          hasParking: row[8],
+          hasSports: row[9],
+          hasPlayground: row[10],
+          img_url: row[1]
+        )
+        logger.info(park_flags)
+        park.set_flags(park_flags)
+        park.save
+      end
+      logger.info(row)
       i+=1
     end
+    redirect_to :root
   end
 
   # GET /parks
