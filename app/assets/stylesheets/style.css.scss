@@ -22,6 +22,26 @@ body, html {
  }
 
 
+
+#searchQuery {
+  height:80px;
+  color: #666666;
+  font-size:25px;
+  display:block;
+
+  .icons {
+    display: inline;
+    position: relative;
+    bottom: -10px;
+  }
+  .tags {
+    display:inline;
+    margin-top: -10px;
+  }
+}
+
+
+
 .search_form {
 	input[type=checkbox] {
    display:none;
