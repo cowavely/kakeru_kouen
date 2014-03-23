@@ -1,14 +1,19 @@
 <div id="searchResults">
-  <h1>
-    <%= @tags %>
-    <% unless @flags.nil? %>
-    <% @flags.each_key do |flag| %>
-      <%= image_tag icon_name(flag, "gray"), size:"25" %>
-    <% end %>
-    <% end %>
-  </h1>
-
   <div class="parkGrid">
+
+  <div id="searchQuery">
+      流山市 x
+      <% unless @flags.nil? %>
+        <% @flags.each_key do |flag| %>
+          <div class="icons"> <%= image_tag icon_name(flag, "gray"), size:"40" %></div> x
+        <% end %>
+      <% end %>
+
+      <% unless @tags.nil? %>
+        <div class= "tags"> <%= @tags.split(" ").join(" x ") %> </div>
+      <% end %>
+
+  </div>
     <% @parks.each do |park| %>
       <div class="parkItem">
           <div class="parkImage">
