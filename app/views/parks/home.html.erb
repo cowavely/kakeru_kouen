@@ -41,74 +41,18 @@
 
 	<div id="demo-wrapper">
 
-         <div id="demo">
+         <div id="demo"  class="search_form">
 
       <figure>
-
-            <div id="flowerbox">
-               <div id="target" onMouseover="openPopUp()" onMouseout="closePopUp()">
-               <%= image_tag "flower-icon-white.png", name:"icon1", onmouseover: "brown1()", onmouseout: "white1()", alt: "flower" %>
-               </div>
-　　　　          <div id="fukidashi" onMouseover="openPopUp()" onMouseout="closePopUp()">
+					<div class="icon_checkbox box">
+						<% Park::FLAGS.each_key do |key| %>
+							<%= check_box_tag "[flags][#{key}]", '1', false, class: 'checkbox' %>
+							<%= label_tag "[flags][#{key}]", (image_tag icon_name(key, "white"), size: '35') %>
+							<!-- <div id="fukidashi" onMouseover="openPopUp()" onMouseout="closePopUp()">
                   綺麗な植物
-　　　　          </div>
-            </div>
-
-            <div id="toiletbox">
-               <div id="target2" onMouseover="openPopUp2()" onMouseout="closePopUp2()">
-               <%= image_tag "toilet-icon-white.png", name:"icon2", onmouseover: "brown2()", onmouseout: "white2()", alt: "toilet" %>
-               </div>
-　　　　          <div id="fukidashi2" onMouseover="openPopUp2()" onMouseout="closePopUp2()">
-                  トイレ
-　　　　          </div>
-            </div>
-
-
-            <div id="waterbox">
-               <div id="target3" onMouseover="openPopUp3()" onMouseout="closePopUp3()">
-               <%= image_tag "water-icon-white.png", name:"icon3", onmouseover: "brown3()", onmouseout: "white3()", alt: "water" %>
-              </div>
-　　　　          <div id="fukidashi3" onMouseover="openPopUp3()" onMouseout="closePopUp3()">
-                  水道
-　　　　          </div>
-            </div>
-
-            <div id="benchbox">
-               <div id="target4" onMouseover="openPopUp4()" onMouseout="closePopUp4()">
-               <%= image_tag "bench-icon-white.png", name:"icon4", onmouseover: "brown4()", onmouseout: "white4()", alt: "bench" %>
-              </div>
-　　　　          <div id="fukidashi4" onMouseover="openPopUp4()" onMouseout="closePopUp4()">
-                  ベンチ
-　　　　          </div>
-            </div>
-
-            <div id="parkingbox">
-               <div id="target5" onMouseover="openPopUp5()" onMouseout="closePopUp5()">
-               <%= image_tag "parking-icon-white.png", name:"icon5", onmouseover: "brown5()", onmouseout: "white5()", alt: "parking" %>
-            </div>
-　　　　          <div id="fukidashi5" onMouseover="openPopUp5()" onMouseout="closePopUp5()">
-                  駐車場
-　　　　          </div>
-            </div>
-
-            <div id="sportsbox">
-               <div id="target6" onMouseover="openPopUp6()" onMouseout="closePopUp6()">
-               <%= image_tag "sports-icon-white.png", name:"icon6", onmouseover: "brown6()", onmouseout: "white6()", alt: "sports" %>
-              </div>
-　　　　          <div id="fukidashi6" onMouseover="openPopUp6()" onMouseout="closePopUp()">
-                  運動場
-　　　　          </div>
-            </div>
-
-            <div id="playgroundbox">
-               <div id="target7" onMouseover="openPopUp7()" onMouseout="closePopUp7()">
-               <%= image_tag "playground-icon-white.png", name:"icon7", onmouseover: "brown7()", onmouseout: "white7()", alt: "playground" %>
-              </div>
-　　　　          <div id="fukidashi7" onMouseover="openPopUp7()" onMouseout="closePopUp()">
-                  遊具
-　　　　          </div>
-            </div>
-
+　　　　          </div> -->
+						<% end %>
+					</div>
       </figure>
 
        <form name="searchform" id="searchform" method="get" action="#">

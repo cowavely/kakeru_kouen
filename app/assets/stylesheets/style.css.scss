@@ -43,11 +43,11 @@ body,h1,h2,h3,h4,h5,h6 {
    border-color: #666666;
  }
 
- .icon_checkbox {
-   position: fixed;
-   top: 1em;
-   right: 1em;
- }
+ // .icon_checkbox {
+ //   position: fixed;
+ //   top: 1em;
+ //   right: 1em;
+ // }
 }
 
 .tag {
@@ -167,13 +167,7 @@ body,h1,h2,h3,h4,h5,h6 {
     div#main{
       position: relative;
     }
-    #flowerbox,
-    #toiletbox,
-    #waterbox,
-    #benchbox,
-    #parkingbox,
-    #sportsbox,
-    #playgroundbox
+    .box
     {
       float: left;
       position: relative;
