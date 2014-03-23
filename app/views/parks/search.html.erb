@@ -3,7 +3,11 @@
 
   <header>
     <div class="inner">
-      <h1><%= image_tag("kakeru_kouen_logo.png") %></h1>
+      <h1>
+      <%= link_to root_path do %>
+        <%= image_tag("kakeru_kouen_logo.png") %>
+      <% end %>
+      </h1>
 
       <div class="icon_checkbox">
         <% Park::FLAGS.each_key do |key| %>

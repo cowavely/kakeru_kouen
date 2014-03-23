@@ -27,6 +27,10 @@ $(function() {
 	console.log(checkboxes);
 	checkboxes.click(updateResults);
 
+  $('#demo').offset({
+    top: ($(window).height() - $('#demo').height()) / 2
+  });
+
 	var tags = $(".tag");
 	console.log(tags);
 	tags.click(function(e) {
