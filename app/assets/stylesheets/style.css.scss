@@ -6,8 +6,12 @@ body,h1,h2,h3,h4,h5,h6 {
 
 body, html {
   height: 100%;
+  display:inline;
 }
 
+#homelogo {
+  position:relative;
+}
 
 .nature-background {
    width: 100%;
@@ -59,9 +63,9 @@ body, html {
    border-color: transparent;
 
    opacity: 0.3;
-   transition: opacity .20s ease-in-out;
-   -moz-transition: opacity .20s ease-in-out;
-   -webkit-transition: opacity .20s ease-in-out;
+   transition: opacity .15s ease-in-out;
+   -moz-transition: opacity .15s ease-in-out;
+   -webkit-transition: opacity .15s ease-in-out;
  }
 
  label:hover, label:active, input[type=checkbox]:hover+label, input[type=checkbox]:active+label {
@@ -315,7 +319,7 @@ body, html {
 
     button:hover {
       border: 1px solid rgba(255, 255, 255, 1.0);;
-
+      cursor: pointer;
     }
  
 
@@ -329,7 +333,7 @@ body, html {
       color: #fff;
       float:right;
       margin-right:50px;
-      border: solid 1px #fff;
+      border: double 1px #fff;
       // background-image: image-url("icon.png");
       background-size: 69px 60px;
       background-position: 1px -8px;
@@ -340,6 +344,7 @@ body, html {
 
     #look:hover{
       border-color:#B4FB51;
+      cursor: pointer;
     }
 
     #caption{
