@@ -1,3 +1,60 @@
 // Place all the styles related to the Parks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+ margin: 0;
+ padding: 0;
+}
+
+#search-page {
+ header {
+  height: 150px;
+  background: rgba(#000, 0.4);
+  margin-bottom: 50px;
+  .inner {
+   overflow: hidden;
+   width: 1040px;
+   margin: 0 auto;
+  }
+  h1 {
+   margin: 0;
+   padding-top: 30px;
+   float: left;
+  }
+
+  .icon_checkbox {
+   padding-top: 60px;
+   margin-left: 50px;
+   float: left;
+   width: 400px;
+   label {
+    margin-right: 10px;
+   }
+  }
+  input[type="checkbox"] {
+   display: none;
+  }
+  .field {
+   padding-top: 50px;
+   float: right;
+   width: 340px;
+   input[type="text"]{
+    font-size: 20px;
+    height: 30px;
+    color: #fff;
+    width: 240px;
+    background: transparent;
+    margin-right: 20px;
+    border: none;
+    border-bottom: 4px #fff solid;
+   }
+   input[type="image"]{
+    border: none;
+    position: relative;
+    top: 10px;
+    left: 0;
+   }
+  }
+ }
+}

@@ -4,7 +4,7 @@ body,h1,h2,h3,h4,h5,h6 {
 	font-family:'Droid Sans',"游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
 }
 
-.search_form {
+.search_form, .inner {
 	input[type=checkbox] {
 	display:none;
 	}
@@ -14,7 +14,7 @@ body,h1,h2,h3,h4,h5,h6 {
 	height: 35px;
 	width: 35px;
 	display:inline-block;
-	padding: 0 15px 5px 15px;
+	padding: 0 4px 5px;
 	border-bottom-style: solid;
 	border-bottom-width: 4px;
 	border-color: transparent;
@@ -36,15 +36,13 @@ body,h1,h2,h3,h4,h5,h6 {
 	width: 35px;
 	opacity: 1.0;
 	display:inline-block;
-	padding: 0 15px 5px 15px;
+	padding: 0 4px 5px;
 
-	border-color: #666666;
+	border-color: #FFF;
 	}
 
 	.icon_checkbox {
-		   position: fixed;
-    	top: 1em;
-    	right: 1em;
+		width: 160px;
 	}
 }
 
