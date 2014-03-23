@@ -8,10 +8,10 @@ body,h1,h2,h3,h4,h5,h6 {
 
 
 #searchQuery {
-  height:80px;
   color: #666666;
-  font-size:25px;
+  font-size:30px;
   display:block;
+  margin-bottom: 70px;
 
   .icons {
     display: inline;
@@ -26,7 +26,7 @@ body,h1,h2,h3,h4,h5,h6 {
 
 
 
-.search_form {
+.search_form, #search-page {
 	input[type=checkbox] {
    display:none;
  }
@@ -62,13 +62,8 @@ body,h1,h2,h3,h4,h5,h6 {
 
    border-color: #666666;
  }
-
- // .icon_checkbox {
- //   position: fixed;
- //   top: 1em;
- //   right: 1em;
- // }
 }
+
 
 // .tag {
 // 	// color:#FFF;
