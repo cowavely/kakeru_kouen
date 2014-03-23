@@ -6,6 +6,26 @@ body,h1,h2,h3,h4,h5,h6 {
 
 #demo-wrapper {
 
+
+#searchQuery {
+  height:80px;
+  color: #666666;
+  font-size:25px;
+  display:block;
+
+  .icons {
+    display: inline;
+    position: relative;
+    bottom: -10px;
+  }
+  .tags {
+    display:inline;
+    margin-top: -10px;
+  }
+}
+
+
+
 .search_form {
 	input[type=checkbox] {
    display:none;
