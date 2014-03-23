@@ -9,6 +9,8 @@
       <% end %>
       </h1>
 
+      <%= form_tag("/search", method: "get") do %>
+
       <div class="icon_checkbox">
         <% Park::FLAGS.each_key do |key| %>
         <%= check_box_tag "[flags][#{key}]", '1', false, class: 'checkbox' %>
@@ -20,6 +22,7 @@
         <%= text_field_tag(:tags, "", placeholder: "") %>
         <%= image_submit_tag("search_page_submit.png") %>
       </div>
+      <% end %>
 
     </div>
 

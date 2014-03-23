@@ -59,9 +59,9 @@ body, html {
    border-color: transparent;
 
    opacity: 0.3;
-   transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;
+   transition: opacity .20s ease-in-out;
+   -moz-transition: opacity .20s ease-in-out;
+   -webkit-transition: opacity .20s ease-in-out;
  }
 
  label:hover, label:active, input[type=checkbox]:hover+label, input[type=checkbox]:active+label {
@@ -159,6 +159,7 @@ body, html {
  background-color: rgba(0,0,0,0.6);
  margin-left: auto;
  margin-right: auto;
+
  width:850px;
  height: 400px;
  color: #fff;
