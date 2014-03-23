@@ -9,7 +9,6 @@ class ParksController < ApplicationController
   end
 
   def search
-    binding.pry
     @parks = Park.all
     @flags = params[:flags]
     @query_flags = 0
