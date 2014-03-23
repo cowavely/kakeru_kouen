@@ -1,34 +1,59 @@
-<div id="searchResults">
-  <h1>
-    <%= @tags %>
-    <% unless @flags.nil? %>
-    <% @flags.each_key do |flag| %>
-      <%= image_tag icon_name(flag, "gray"), size:"25" %>
-    <% end %>
-    <% end %>
-  </h1>
+<div id="search-page">
 
-  <div class="parkGrid">
-    <% @parks.each do |park| %>
-      <div class="parkItem">
-          <div class="parkImage">
-            <%= image_tag park.image, size: '268' %>
-          </div>
-          <div class="parkTitle">
-            <h2><%= park.name %></h2>
-          </div>
-          <div class="parkAddress">
-            <p><%= park.address %></p>
-          </div>
-          <div class="icon_guide">
-            <% Park::FLAGS.each_key do |flag| %>
-              <%= image_tag icon_name(flag, "brown"), size: "20", class: "#{'off' unless park.has_flag?(flag)}" %>
-            <% end %>
-          </div>
-          <div class="parkDescription">
-            <%= park.description %>
-          </div>
+  <header>
+    <div class="inner">
+      <h1><%= image_tag("kakeru_kouen_logo.png") %></h1>
+
+      <div class="icon_checkbox">
+        <% Park::FLAGS.each_key do |key| %>
+        <%= check_box_tag "[flags][#{key}]", '1', false, class: 'checkbox' %>
+        <%= label_tag "[flags][#{key}]", (image_tag icon_name(key, "gray"), size: '35') %>
+        <% end %>
       </div>
-    <% end %>
+
+      <div class="field">
+        <%= text_field_tag(:tags, "", placeholder: "") %>
+        <%= image_submit_tag("search_page_submit.png") %>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <div id="searchResults">
+    <h1>
+      <%= @tags %>
+      <% unless @flags.nil? %>
+      <% @flags.each_key do |flag| %>
+      <%= image_tag icon_name(flag, "gray"), size:"25" %>
+      <% end %>
+      <% end %>
+    </h1>
+
+    <div class="parkGrid">
+      <% @parks.each do |park| %>
+      <div class="parkItem">
+        <div class="parkImage">
+          <%= image_tag park.image, size: '268' %>
+        </div>
+        <div class="parkTitle">
+          <h2><%= park.name %></h2>
+        </div>
+        <div class="parkAddress">
+          <p><%= park.address %></p>
+        </div>
+        <div class="icon_guide">
+          <% Park::FLAGS.each_key do |flag| %>
+          <%= image_tag icon_name(flag, "brown"), size: "20", class: "#{'off' unless park.has_flag?(flag)}" %>
+          <% end %>
+        </div>
+        <div class="parkDescription">
+          <%= park.description %>
+        </div>
+      </div>
+      <% end %>
+    </div>
   </div>
+
 </div>
