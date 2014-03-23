@@ -30,6 +30,48 @@ class ParksController < ApplicationController
     end
   end
 
+  def load_parks
+    Spreadsheet.client_encoding = 'UTF-8'
+
+    book = Spreadsheet.open 'app/assets/parks.xls'
+    sheet1 = book.worksheet 0 # スプレッドシートの1枚目を指定
+    Park.delete_all
+    i=0
+    sheet1.each do |row|
+      # do something interesting with a row
+      # if i>0
+        if i > 0
+          park_flags = {
+              has_toilet: row[5],
+              has_water: row[6],
+              has_nature: row[4],
+              has_bench: row[7],
+              has_parking: row[8],
+              has_sports: row[9],
+              has_playground: row[10]
+          }
+          park = Park.new(
+            name: row[0],
+            address: row[3],
+            description: row[2],
+            hasToilet: row[5],
+            hasWater: row[6],
+            hasNature: row[4],
+            hasBench: row[7],
+            hasParking: row[8],
+            hasSports: row[9],
+            hasPlayground: row[10],
+            img_url: row[1]
+          )
+          park.set_flags(park_flags)
+          park.save
+        end
+        logger.info(row)
+      # end
+      i+=1
+    end
+  end
+
   # GET /parks
   # GET /parks.json
   def index

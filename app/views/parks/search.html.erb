@@ -39,7 +39,7 @@
     <% @parks.each do |park| %>
       <div class="parkItem">
           <div class="parkImage">
-            <%= image_tag park.image, size: '268' %>
+            <img src=<%= park.img_url %> style="width:268px;height:268px;" />
           </div>
           <div class="parkTitle">
             <h2><%= park.name %></h2>

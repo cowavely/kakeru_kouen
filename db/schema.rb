@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140322103126) do
+ActiveRecord::Schema.define(version: 20140323063510) do
 
   create_table "parks", force: true do |t|
     t.string   "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140322103126) do
     t.boolean  "hasPlayground"
     t.string   "image"
     t.integer  "flags",         default: 0
+    t.string   "img_url"
   end
 
   create_table "taggings", force: true do |t|

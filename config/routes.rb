@@ -1,5 +1,6 @@
 KakeruKouen::Application.routes.draw do
   root :to => 'parks#home'
+  get 'load_parks' => 'parks#load_parks'
   resources :parks
   get 'search' => 'parks#search', :as => 'search'
 
