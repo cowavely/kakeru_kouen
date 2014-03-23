@@ -1,101 +1,29 @@
+<div id="demo-wrapper" class="nature-background">
+	<div id="demo"  class="search_form">
+		<%= form_tag("/search", method: "get") do %>
+			<figure>
+				<div class="icon_checkbox box">
+					<% Park::FLAGS.each_key do |key| %>
+						<%= check_box_tag "[flags][#{key}]", '1', false, class: 'checkbox' %>
+						<%= label_tag "[flags][#{key}]", (image_tag icon_name(key, "white"), size: '35') %>
+					<% end %>
+				</div>
+      		</figure>
 
-<!-- <div id="header">
-
-</div>
-
-<div class="search_form">
-
-	<%= form_tag("/search", method: "get") do %>
-
-		<div class="region">
-			<%= select_tag "region", "<option>流山市</option><option>北部</option><option>南部</option><option>中部</option><option>東部</option>".html_safe %>
-		</div>
-
-		<div class="icon_checkbox">
-			<% Park::FLAGS.each_key do |key| %>
-				<%= check_box_tag "[flags][#{key}]", '1', false, class: 'checkbox' %>
-				<%= label_tag "[flags][#{key}]", (image_tag icon_name(key, "gray"), size: '35') %>
-			<% end %>
-		</div>
-
-		<div class="equation">
-		<button id="clear-button">Clear</button>
-		<%= text_field_tag(:tags, "", placeholder: "") %>
-		<h1> x = <div id="resultNum"><%= Park.count %></div></h1>
-		</div>
-
-		<%= submit_tag "見る" %>
-
-		<div class="tag_cloud">
-		<% ActsAsTaggableOn::Tag.all.pluck(:name).sample(10).each do |tag| %>
-			<div class="tag" onclick="document.getElementById('tags').value+=' <%= tag %> ';">
-				<%= tag %>
-			</div>
-		<% end %>
-		</div>
-
-	<% end %>
-
-</div>
- -->
-
-	<div id="demo-wrapper">
-
-
-         <div id="demo"  class="search_form">
-
-
-      <%= form_tag("/search", method: "get") do %>
-      <figure>
-					<div class="icon_checkbox box">
-						<% Park::FLAGS.each_key do |key| %>
-							<%= check_box_tag "[flags][#{key}]", '1', false, class: 'checkbox' %>
-							<%= label_tag "[flags][#{key}]", (image_tag icon_name(key, "white"), size: '35') %>
-							<!-- <div id="fukidashi" onMouseover="openPopUp()" onMouseout="closePopUp()">
-                  綺麗な植物
-　　　　          </div> -->
-						<% end %>
-					</div>
-      </figure>
+    <br class="clear">
 
        <div id="searchform">
        	<%= text_field_tag(:tags, "", placeholder: "", id: "keywords") %>
-         ×公園=
+         ×公園= <div id="resultNum"><%= Park.count %></div>
         </div>
-
 				<%= submit_tag '見る', id:"look" %>
          <div id="buttons">
-					<% ActsAsTaggableOn::Tag.all.pluck(:name).sample(10).each do |tag| %>
-						<button class="tag">
-							<%= tag %>
-						</button>
-					<% end %>
-					</div>
-
-
-<!--
-      <div id="buttons">
-         <button id="1">リフレッシュ</button>
-         <button id="2">リラックス</button>
-         <button id="3">一人で泣きたい</button>
-         <button id="4">おしゃべりする</button>
-         <button id="5">楽しい</button>
-         <button id="6">悲しい</button>
-         <button id="7">苦しい</button>
-         <button id="8">嬉しい</button>
-         <button id="9">9</button>
-         <button id="10">10</button>
-         <button id="11">11</button>
-         <button id="12">12</button>
-         <button id="13">13</button>
-         <button id="14">14</button>
-      </div>
- -->
-      <% end %>
-
-     <div id="caption">
-
-      </div>
-</div>
-
+				<% ActsAsTaggableOn::Tag.all.pluck(:name).sample(10).each do |tag| %>
+					<button class="tag">
+						<%= tag %>
+					</button>
+				<% end %>
+			</div>
+    	<% end %>
+	</div>
 </div>

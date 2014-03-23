@@ -1,6 +1,6 @@
 function updateResults () {
 		var checkboxes = $(".checkbox:checked");
-		var tags = $("#tags");
+		var tags = $("#keywords");
 		var region = $("#region");
 		var flags = {};
 		checkboxes.each (function(){
@@ -26,6 +26,10 @@ $(function() {
 	var checkboxes = $(".checkbox");
 	console.log(checkboxes);
 	checkboxes.click(updateResults);
+
+  $('#demo').offset({
+    top: ($(window).height() - $('#demo').height()) / 2
+  });
 
 	var tags = $(".tag");
 	console.log(tags);
