@@ -29,7 +29,12 @@ $(function() {
 
 	var tags = $(".tag");
 	console.log(tags);
-	tags.click(updateResults);
+	tags.click(function(e) {
+    e.preventDefault();
+    var key = $('#keywords');
+    key.val(key.val() + ' ' + $(e.target).text().trim());
+    updateResults();
+  });
 
 	var region = $("#region");
 	console.log(region);
