@@ -15,7 +15,7 @@ function updateResults () {
 		};
 		console.log(params);
 
-		// send params to search and get response 
+		// send params to search and get response
 		$.get("/search", params, function(response){
 			console.log(response);
 			$("#resultNum").text(response.count);
@@ -29,7 +29,12 @@ $(function() {
 
 	var tags = $(".tag");
 	console.log(tags);
-	tags.click(updateResults);
+	tags.click(function(e) {
+    e.preventDefault();
+    var key = $('#keywords');
+    key.val(key.val() + ' ' + $(e.target).text().trim());
+    updateResults();
+  });
 
 	var region = $("#region");
 	console.log(region);
@@ -87,39 +92,39 @@ $(function(){
 // アイコン切り替え、mosueover
 
 icon1 = new Image();
-icon1.src = "flower-icon-blown.png";
- function brown1(){document.icon1.src="flower-icon-brown.png";}
- function white1(){document.icon1.src="flower-icon-white.png";}
+icon1.src = "/assets/flower-icon-blown.png";
+ function brown1(){document.icon1.src="/assets/flower-icon-brown.png";}
+ function white1(){document.icon1.src="/assets/flower-icon-white.png";}
 
 icon2 = new Image();
-icon2.src = "toilet-icon-blown.png";
- function brown2(){document.icon2.src="toilet-icon-brown.png";}
- function white2(){document.icon2.src="toilet-icon-white.png";}
+icon2.src = "/assets/toilet-icon-blown.png";
+ function brown2(){document.icon2.src="/assets/toilet-icon-brown.png";}
+ function white2(){document.icon2.src="/assets/toilet-icon-white.png";}
 
 icon3 = new Image();
-icon3.src = "water-icon-blown.png";
- function brown3(){document.icon3.src="water-icon-brown.png";}
- function white3(){document.icon3.src="water-icon-white.png";}
+icon3.src = "/assets/water-icon-blown.png";
+ function brown3(){document.icon3.src="/assets/water-icon-brown.png";}
+ function white3(){document.icon3.src="/assets/water-icon-white.png";}
 
 icon4 = new Image();
-icon4.src = "bench-icon-blown.png";
- function brown4(){document.icon4.src="bench-icon-brown.png";}
- function white4(){document.icon4.src="bench-icon-white.png";}
+icon4.src = "/assets/bench-icon-blown.png";
+ function brown4(){document.icon4.src="/assets/bench-icon-brown.png";}
+ function white4(){document.icon4.src="/assets/bench-icon-white.png";}
 
 icon5 = new Image();
-icon5.src = "parking-icon-blown.png";
- function brown5(){document.icon5.src="parking-icon-brown.png";}
- function white5(){document.icon5.src="parking-icon-white.png";}
+icon5.src = "/assets/parking-icon-blown.png";
+ function brown5(){document.icon5.src="/assets/parking-icon-brown.png";}
+ function white5(){document.icon5.src="/assets/parking-icon-white.png";}
 
 icon6 = new Image();
-icon6.src = "sports-icon-blown.png";
- function brown6(){document.icon6.src="sports-icon-brown.png";}
- function white6(){document.icon6.src="sports-icon-white.png";}
+icon6.src = "/assets/sports-icon-blown.png";
+ function brown6(){document.icon6.src="/assets/sports-icon-brown.png";}
+ function white6(){document.icon6.src="/assets/sports-icon-white.png";}
 
 icon7 = new Image();
-icon7.src = "playground-icon-blown.png";
- function brown7(){document.icon7.src="playground-icon-brown.png";}
- function white7(){document.icon7.src="playground-icon-white.png";}
+icon7.src = "/assets/playground-icon-blown.png";
+ function brown7(){document.icon7.src="/assets/playground-icon-brown.png";}
+ function white7(){document.icon7.src="/assets/playground-icon-white.png";}
 
 
 //onclick---icon underline
