@@ -76,9 +76,9 @@ body, html {
    opacity: 1.0;
    display:inline-block;
    padding: 0 15px 5px 15px;
-
    border-color: #666666;
  }
+ 
 }
 
 .parkGrid {
@@ -155,8 +155,8 @@ body, html {
  background-color: rgba(0,0,0,0.6);
  margin-left: auto;
  margin-right: auto;
- width:800px;
- height: 450px;
+ width:850px;
+ height: 400px;
  color: #fff;
       /*opacity: 0.4;*/
       position: center;
@@ -180,8 +180,8 @@ body, html {
     }
     .box
     {
-      float: left;
-      position: relative;
+      float: right;
+      margin-right: 47px;;
     }
 
     div#fukidashi{
@@ -271,6 +271,7 @@ body, html {
     #searchform {
       margin-top: 60px;
       margin-left: 50px;
+      margin-right: 0;
       font-size: 50px;
     }
     #input:focus{
@@ -316,9 +317,10 @@ body, html {
       padding-right: 10px;
       size: 27px;
       color: #fff;
-      margin-left: 700px;
+      float:right;
+      margin-right:50px;
       border: solid 2px #fff;
-      background-image: image-url("icon.png");
+      // background-image: image-url("icon.png");
       background-size: 69px 60px;
       background-position: 1px -8px;
       background-repeat: no-repeat;

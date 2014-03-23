@@ -1,3 +1,5 @@
+require 'spreadsheet'
+
 class ParksController < ApplicationController
   before_action :set_park, only: [:show, :edit, :update, :destroy]
   http_basic_authenticate_with :name => "nagareyama", :password => "iwark", only: [:show, :edit, :update, :destroy]
